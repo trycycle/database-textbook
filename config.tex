@@ -1,0 +1,69 @@
+% -------------
+% 文字数・行数設定
+% -------------
+% 1行あたりの文字数
+\setlength { \textwidth } { 37zw }
+% 1ページあたりの行数
+\setlength { \textheight } { 32\baselineskip }
+
+% -------------
+% 自作カラー
+% -------------
+\definecolor{brandblue}{rgb}{0.34, 0.7, 1}
+\definecolor{background}{rgb}{0.94,0.95,0.96}
+\definecolor{turquoisegreen}{rgb}{0.63, 0.84, 0.71}
+
+% -------------
+% 自作修飾
+% -------------
+%\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\graybox}[1]{\colorbox[gray]{0.9}{\texttt{#1}}}
+\newcommand{\strong}[1]{\textbf{#1}}
+
+% -------------
+% 自作スタイル
+% -------------
+\tcbset {
+  base/.style={
+    arc=0mm,
+    bottomtitle=0.5mm,
+    boxrule=0mm,
+    %colbacktitle=black!10!white,
+    coltitle=black,
+    fonttitle=\bfseries,
+    %leftrule=1mm,
+    %left=2.5mm,
+    left=3.5mm,
+    right=3.5mm,
+    title={#1},
+    toptitle=0.75mm,
+  }
+}
+
+\newtcolorbox{mainbox}[1]{
+  colframe=brandblue,
+  base={#1}
+}
+
+\newtcolorbox{notebox}[1]{
+  colframe=brandblue,
+  base={Note - #1}
+}
+
+\newtcolorbox{warningbox}[1]{
+  colframe=orange,
+  base={注意 - #1}
+}
+
+\newtcolorbox{tipbox}[1]{
+  colframe=turquoisegreen,
+  base={Tip - #1}
+}
+
+\newtcolorbox{subbox}[1]{
+  colframe=black!30!white,
+  base={#1}
+}
+
+\usepackage{minted}
+\usemintedstyle[sql]{tango}

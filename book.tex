@@ -1,0 +1,68 @@
+\documentclass[11pt,dvipdfmx,b5paper]{jsbook}
+%\documentclass[11pt,dvipdfmx,a5paper,oneside]{jsbook}
+
+% -------------
+% 基本パッケージ
+% -------------
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption} % 図表のキャプションを変更する
+\usepackage{geometry} % ページレイアウトを変更する
+\usepackage{here} % 画像を強制的にその場に表示させる
+\usepackage{framed} % 改ページ可能なフレームの生成
+\usepackage{wrapfig} % 図の周りにテキストを回り込ませる
+\usepackage{algorithm} % 疑似コードを書くためのパッケージ
+\usepackage{listings} % ソースコードを書くためのパッケージ
+%\usepackage{balance} % 2カラム文書を書く場合に左右カラムでバランスを取る
+
+% -------------
+% フォント系パッケージ
+% -------------
+\usepackage[utf8]{inputenc} % 文字コードを指定
+\usepackage{microtype}
+\usepackage[T1]{fontenc} % フォントのエンコーディングを指定
+\usepackage{lmodern} % ラテンモダンフォントを指定
+\usepackage{xcolor} % 文字の色を変えられるように
+
+% -------------
+% 数学表記系パッケージ
+% -------------
+\usepackage{latexsym} % 数式で使える記号を増やす
+\usepackage{amsmath} % 数式を書くためのパッケージ
+\usepackage{bm} % 太字のベクトルを書けるように
+
+% -------------
+% リンク/目次系パッケージ
+% -------------
+\usepackage{url} % URLを書けるように
+\usepackage[hidelinks]{hyperref} % ハイパーリンク付き文書を書けるように
+\usepackage{pxjahyper} % hyperrefの機能を拡張する
+
+% -------------
+% 装飾系パッケージ
+% -------------
+%\usepackage{quotchap} % 章見出しを装飾する
+%\usepackage{titlesec} 見出しの書式を変える
+\usepackage[most]{tcolorbox} % 枠囲みを作成するパッケージ
+%\usepackage{tikz} % tcolorboxとセットで使う
+
+% -------------
+% 執筆補助パッケージ
+% -------------
+\usepackage{lineno} % 行番号を表示
+%\linenumbers
+
+% -----------------
+% 自作の関数・スタイル
+% -----------------
+\input{config.tex}
+
+% ------------
+% コンテンツ
+% ------------
+\begin{document}
+
+\input{chapter/introduction.tex}
+%\input{chapter/sql.tex}
+
+\end{document}
