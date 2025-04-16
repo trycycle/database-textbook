@@ -6,3 +6,5 @@ _minted-book
 *.log
 *.out
 *.synctex.gz
+*.bbl
+*.blg
