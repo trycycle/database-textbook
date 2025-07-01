@@ -30,6 +30,7 @@
 \usepackage{latexsym} % 数式で使える記号を増やす
 \usepackage{amsmath} % 数式を書くためのパッケージ
 \usepackage{bm} % 太字のベクトルを書けるように
+\usepackage{amsfonts}
 
 % -------------
 % リンク/目次系パッケージ
@@ -60,15 +61,27 @@
 % ------------
 % コンテンツ
 % ------------
+% 森北出版さんからの依頼事項
+% - ページ数についてはざっくり「200ページ程度」
+% - これにはまえがき等も含まれる
+% - 1ページあたりの文字数は37文字×32行
+% ------------
 \begin{document}
+% 前書き
+\frontmatter
+\input{chapter/preface.tex}
+
 % 目次
 \tableofcontents
 
 % コンテンツ
+\mainmatter
 \input{chapter/introduction.tex}
 \input{chapter/concept-of-database.tex}
+\input{chapter/relational-data-model.tex}
 %\input{chapter/sql.tex}
 
+\backmatter
 \bibliography{reference}
 \bibliographystyle{tipsj}
 
